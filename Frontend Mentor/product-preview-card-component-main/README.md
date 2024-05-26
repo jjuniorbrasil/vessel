@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [click here.](https://github.com/jjuniorbrasil/vessel)
-- Live Site URL: [click here.](https://jjuniorbrasil.github.io/vessel/Frontend-Mentor/product-preview-card-component-main/index.html)
+- Solution URL: [click here.](https://github.com/jjuniorbrasil/vessel/blob/main/Frontend%20Mentor/product-preview-card-component-main/index.html)
+- Live Site URL: [click here.](https://jjuniorbrasil.github.io/vessel/Frontend%20Mentor/product-preview-card-component-main/index.html)
 
 ## My process
 
