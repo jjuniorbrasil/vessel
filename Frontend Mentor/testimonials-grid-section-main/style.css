@@ -136,9 +136,11 @@ main {
         flex-direction: column;
         height: 100vh;
         justify-content: center;
+        align-items: center;
     }
 
     main {
+        max-width: 80vw;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-auto-rows: 1fr;
