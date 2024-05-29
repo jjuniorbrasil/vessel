@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/jjuniorbrasil/vessel/tree/main/Frontend%20Mentor/four-card-feature-section-master)
+- Solution URL: [Solution](https://github.com/jjuniorbrasil/vessel/blob/main/Frontend%20Mentor/four-card-feature-section-master/index.html)
 - Live Site URL: [Live site](https://jjuniorbrasil.github.io/vessel/Frontend%20Mentor/four-card-feature-section-master/)
 
 ## My process
