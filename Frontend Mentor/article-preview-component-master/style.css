@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    min-width: 375px;
+}
+
+main {
+    position: relative;
+    margin: 3em 2em;
+    border-radius: 1em;
+    overflow: hidden;
+    color: var(--very-dark-grayish-blue);
+}
+
+main h2 {
+    font-weight: 700;
+}
+
+main p {
+    font-weight: 500;
+    opacity: 70%;
+}
+
+main .imgcontainer {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+}
+
+main .imgcontainer > img {
+    width: 100%;
+}
+
+main .bottom {
+    display: flex;
+    margin-top: 1.5em;
+}
+
+main .bottom img {
+    float: left;
+    width: 15%;
+    border-radius: 100px;
+}
+
+main .content {
+    position: relative;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+
+main .content .bottom {
+    display: flex;
+    align-items: center;
+}
+
+main .content .bottom .author {
+    align-self: center;
+    flex-grow: 1;
+    margin-left: 1em;
+}
+
+main .content .bottom .author p:nth-child(1) {
+    opacity: 100%;
+}
+
+main .icon-container {
+    padding: 8px;
+}
+
+main .icon-container.active {
+    position: relative;
+    top: 7px;
+    background: var(--desaturated-dark-blue);
+    padding: 8px;
+    border-radius: 100px;
+    z-index: 2;
+}
+
+main .svg-icon {
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+main .svg-icon.share {
+    user-select: none;
+    mask-image: url('./images/icon-share.svg');
+    background: var(--very-dark-grayish-blue);
+    height: 15px;
+    width: 15px;
+}
+
+main .svg-icon.share.active {
+    background: white;
+}
+
+main .share-links {
+    display: none;
+    user-select: none;
+}
+
+main .share-links.shown {
+    position: absolute;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    bottom: 0;
+    padding: 2em;
+    background: var(--very-dark-grayish-blue);
+    color: var(--light-grayish-blue);
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 0.5em;
+    width: 100%;
+}
+
+main .share-links span {
+    opacity: 70%;
+}
+
+.attribution {
+    text-align: center;
+}
+
+@media (min-width: 630px) {
+    main {
+        display: flex;
+        align-content: stretch;
+    }
+
+    main .imgcontainer {
+        position: relative;
+        height: 300px;
+        flex-grow: 1;
+    }
+
+    main .imgcontainer img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    main .icon-container.active {
+        top: 0;
+    }
+
+    main .share-links.shown {
+        position: absolute;
+        justify-content: center;
+        padding: 1.5em 1.5em;
+        width: 40%;
+        right: 10px;
+        bottom: 32%;
+        z-index: 2;
+        border-radius: 1em;
+    }
+
+    main .share-links.shown::after {
+        content: " ";
+        position: absolute;
+        top: 100%; /* At the bottom of the tooltip */
+        right: 8%;
+        margin-left: -5px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: var(--very-dark-grayish-blue) transparent transparent transparent;
+      }
+}
+
+@media (min-width: 850px) {
+    body {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        max-width: 50vw;
+    }
+
+    main .content {
+        padding: 3em;
+    }
+
+    main .imgcontainer {
+        max-width: 300px;
+    }
+
+    main .bottom img {
+        max-width: 3em;
+    }
+
+    main .share-links.shown::after {
+        right: 2.7em;
+      }
+}
