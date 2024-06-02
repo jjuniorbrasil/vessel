@@ -218,13 +218,27 @@ main form input[type=button], .sucess-message button {
     main {
         flex-direction: row;
         min-height: 40vh;
-        min-width: 80vw;
+        min-width: 20vw;
         align-items: center;
-        padding: 1%;
+        padding: 2em;
+        column-gap: 2em;
+    }
+
+    main .signup {
+        margin: 5em 2em;
+        justify-content: center;
+        padding: 0;
     }
 
     main picture {
+        flex-shrink: 1;
         order: 2;
+    }
+
+    main picture img {
+        border-radius: 10px;
+        width: 100%;
+        object-fit:cover;
     }
 
     .sucess-message {
