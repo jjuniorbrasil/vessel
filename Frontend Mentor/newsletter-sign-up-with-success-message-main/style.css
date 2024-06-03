@@ -30,7 +30,6 @@ h1 {
 main, .sucess-message {
     display: flex;
     flex-direction: column;
-    min-height: 97vh;
     justify-content: space-between;
     padding-bottom: 1em;
 }
@@ -181,8 +180,8 @@ main form input[type=button], .sucess-message button {
 
     main, .sucess-message {
         color: var(--dark-slate-grey);
-        max-width: 50vw;
-        max-height: 70vh;
+        height: auto;
+        max-height: none;
         border-radius: 2em;
         background-color: var(--white);
     }
@@ -216,35 +215,24 @@ main form input[type=button], .sucess-message button {
     }
 
     main {
-        flex-direction: row;
-        min-height: 40vh;
-        min-width: 20vw;
-        align-items: center;
+        box-sizing: content-box;
         padding: 2em;
-        column-gap: 2em;
-    }
-
-    main .signup {
-        margin: 5em 2em;
-        justify-content: center;
-        padding: 0;
+        flex-direction: row;
+        align-items: center;
+        width: 60vw;
+        gap: 1em;
     }
 
     main picture {
-        flex-shrink: 1;
         order: 2;
     }
 
     main picture img {
-        border-radius: 10px;
         width: 100%;
-        object-fit:cover;
     }
 
-    .sucess-message {
-        min-width: auto;
-        max-width: none;
-        width: 30vw;
+    main .signup {
+        padding: 0;
     }
 
     main form input[type=button]:hover, .sucess-message button:hover {
