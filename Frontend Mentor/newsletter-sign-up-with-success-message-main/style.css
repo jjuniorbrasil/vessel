@@ -235,6 +235,12 @@ main form input[type=button], .sucess-message button {
         padding: 0;
     }
 
+    .signup li::before {
+        position: absolute;
+        left: -10%;
+        content: url(./assets/images/icon-list.svg);
+    }
+
     main form input[type=button]:hover, .sucess-message button:hover {
         background: linear-gradient(to right, #FF487A, #FF683E);
     }
