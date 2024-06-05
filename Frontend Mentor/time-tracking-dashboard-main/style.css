@@ -14,6 +14,7 @@
 
 --very-dark-blue: hsl(226, 43%, 10%);
 --dark-blue: hsl(235, 46%, 20%);
+--dark-blue-active: hsl(234, 30%, 33%);
 --desaturated-blue: hsl(235, 45%, 61%);
 --pale-blue: hsl(236, 100%, 87%);
 }
@@ -39,12 +40,14 @@ a {
 
 a:hover {
     color: var(--pale-blue);
+    cursor: pointer;
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 300;
     color: white;
+    opacity: 100%;
 }
 
 * {
@@ -57,7 +60,7 @@ main {
     margin: 1.5em;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1.5em;
 }
 
 main .main-card {
@@ -84,8 +87,8 @@ main .main-card .head .content span {
 }
 
 main .main-card .head .content h1.name {
-    color: var(--pale-blue);
-    font-weight: 100;
+    color: white;
+    font-weight: 300;
 }
 
 main .main-card .head img {
@@ -110,19 +113,29 @@ main .card {
     background-image: url('./images/icon-work.svg');
     background-repeat: no-repeat;
     background-position: 95% -15%;
-    height: 25vh;
+    height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: end;
 }
 
+main .card:hover {
+    .content {
+        background-color: var(--dark-blue-active);
+    }
+
+    cursor: pointer;
+}
+
 main .card .content {
+    box-sizing: border-box;
     max-height: 80%;
     border-top-left-radius: 0.8em;
     border-top-right-radius: 0.8em;
     padding: 2em 1.5em;
     position: relative;
     background: var(--dark-blue);
+    user-select: none;
 }
 
 main .card .content .menu > * {
@@ -188,3 +201,110 @@ main .card.self-care {
     text-align: center;
 }
 
+@media (min-width: 768px) and (orientation: portrait) {
+    main {
+        width: 80%;
+    }
+
+    main .card {
+        height: 10vh;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        height: 100vh;
+    }
+
+    main {
+        display: grid;
+        width: 70vw;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 30vh 30vh;
+        grid-template-areas:    "main card card card"
+                                "main card card card";
+    }
+
+    main .main-card {
+        grid-area: main;
+    }
+    
+    main .main-card .head {
+        height: 70%;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20%;
+        align-items: start;
+    }
+
+    main .main-card .head .content h1.name {
+        font-size: 3rem;
+    }
+
+    main .main-card .head img {
+        max-width: 40%;
+    }
+
+    main .main-card nav.links {
+        flex-direction: column;
+        flex: 1;
+        margin: 0 2em;
+    }
+
+    main .card {
+        height: auto;
+    }
+
+    main .card .content {
+        height: 80%;
+        padding: 1.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    main .card .content .info {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    main .card .content .info h1.hours {
+        font-size: 3rem;
+        line-height: 1.4em;
+    }
+
+    main .card .content .info span.previous {
+        font-size: 0.8rem;
+    }
+
+    main .card.work {
+        background-position: 95% 0%;
+    }
+
+    main .card.play {
+        background-position: 95% 0%;
+    }
+    
+    main .card.study {
+        background-position: 95% 0%;
+    }
+    
+    main .card.exercise {
+        background-position: 95% 5%;
+    }
+    
+    main .card.social {
+        background-position: 95% 0%;
+    }
+    
+    main .card.self-care {
+        background-position: 95% 0%;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    main .card .content .info h1.hours {
+        font-size: 4rem;
+        line-height: 1.4em;
+    }
+}

@@ -3,6 +3,7 @@ import data from './data.json' with { type : "json" };
 const mainCard = document.querySelector('.main-card');
 const viewLinks = mainCard.querySelectorAll('.links a');
 const allCards = document.querySelectorAll('.card');
+const allMenuIcons = document.querySelectorAll('.menu-icon');
 const cardStates = {
     "work" : 'weekly',
     "play" : 'weekly',
@@ -11,6 +12,20 @@ const cardStates = {
     "social" : 'weekly',
     "selfcare" : 'weekly',
 };
+
+allMenuIcons.forEach(
+    (el) => {
+        let menu = el.parentNode;
+        let content = menu.parentNode;
+        let card = content.parentNode;
+        el.addEventListener('click', () => {
+            let cardName = card.querySelector('.title').innerHTML.toLowerCase().replace(" ", "");
+            cardStates[cardName] = 'daily';
+            loadCardData(card);
+            console.log('clicked! my father card:' + cardName);
+        });
+    }
+);
 
 for (let link of viewLinks) {
     link.addEventListener('click', stateChange);
