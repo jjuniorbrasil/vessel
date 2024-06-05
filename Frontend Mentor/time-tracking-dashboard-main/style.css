@@ -220,9 +220,10 @@ main .card.self-care {
         display: grid;
         width: 70vw;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 30vh 30vh;
+        grid-template-rows: 1fr 1fr;
         grid-template-areas:    "main card card card"
                                 "main card card card";
+        height: 550px;
     }
 
     main .main-card {
