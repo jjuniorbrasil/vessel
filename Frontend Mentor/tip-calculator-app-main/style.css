@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    font-size: 20px;
+}
+
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+img:first-child {
+    margin: 2em 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    background: var(--light-grayish-cyan);
+}
+    
+main {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: white;
+    border-radius: 1em;
+    padding: 1.8em;
+    width: 100%;
+}
+
+main .desc {
+    color: var(--dark-grayish-cyan);
+    font-size: 0.8rem;
+}
+
+main input[type="number"].input {
+    font-size: 1.4em;
+    font-family: "Space Mono", monospace;
+    color: var(--very-dark-cyan);
+    font-weight: 700;
+    outline: none;
+    border-style: none;
+    text-align: end;
+    padding: 0.4em;
+    margin: 0.5em 0;
+    background-image: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+    background-size: 12px;
+}
+
+main input[type="number"].input.custom {
+    padding: 1em;
+    text-align: right;
+    margin: 0;
+}
+
+main input[type="number"].input:focus, main input[type="number"].input:active {
+    outline: 1px solid var(--strong-cyan);
+    border-color: rgb(139, 139, 139);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+main input[type="number"].input::placeholder {
+    color: var(--dark-grayish-cyan);
+}
+
+main input[type="number"].input.num-people {
+    background-image: url(./images/icon-person.svg);
+}
+
+main .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em 0;
+    gap: 0.8em;
+}
+
+main .buttons > * {
+    flex: 1;
+    flex-basis: 40%;
+}
+
+main .buttons .button {
+    background-color: var(--very-dark-cyan);
+    color: white;
+    font-size: 26px;
+    font-family: "Space Mono", monospace;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0.3em 0;
+}
+
+main .buttons .button:hover, main .buttons .button:focus {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+main input[type="number"].input.custom {
+    background-image: none;
+    width: 100%;
+    padding: 0;
+}
+
+main .result {
+    background-color: var(--very-dark-cyan);
+    padding: 1.5em 1em;
+    border-radius: 10px;
+}
+
+main .result > * {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .result div .desc {
+    color: var(--White);
+}
+
+main .result div .value {
+    color: var(--strong-cyan);
+    font-size: 30px;
+}
+
+main .result div .detail {
+    font-size: 16px;
+    position: relative;
+    bottom: 0.5em;
+    color: var(--grayish-cyan);
+}
+
+main .result .button {
+    justify-content: center;
+    color: var(--very-dark-cyan);
+    padding: 0.4em 0;
+    border-radius: 5px;
+    margin-top: 1em;
+    background-color: var(--strong-cyan);   
+}
+
+main .result .button:focus, main .result .button:active {
+    background-color: var(--light-grayish-cyan);
+}

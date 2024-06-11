@@ -8,37 +8,50 @@
   
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <img src="./images/logo.svg" alt="Splitter logo">
+  <main>
+          <span class="desc">Bill</span>
+          <input type="number" class="input bill" min="1" step="any" placeholder="142.55"/>
+          <span class="desc">Select Tip %</span>
+          <div class="buttons">
+            <div class="button" tabindex="0">5%</div>
+            <div class="button" tabindex="0">10%</div>
+            <div class="button" tabindex="0">15%</div>
+            <div class="button" tabindex="0">25%</div>
+            <div class="button" tabindex="0">50%</div>
+            <input type="number" class="input custom" min="1" step="any" placeholder="Custom" max="100"/>
+          </div>
+          <span class="desc">Number of People</span>
+          <input type="number" class="input num-people" step="1" placeholder="5" max="12">
+          <div class="result">
 
-  Bill
+            <div class="tip-amount">
+              <div>
+                <span class="desc">Tip Amount</span><br>
+                <span class="detail">/ person</span>
+              </div>
+              <span class="value">$4.29</span>
+            </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+            <div class="total">
+              <div>
+                <span class="desc">Total</span><br>
+                <span class="detail">/ person</span>
+              </div>
+              <span class="value">$32.59</span>
+            </div>
 
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
+            <div class="button" tabindex="0">RESET</div>
+          </div>
+  </main>
+<!--   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+  <script src="index.js"></script>
 </body>
 </html>
