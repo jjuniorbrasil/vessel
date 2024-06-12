@@ -243,3 +243,9 @@ main .result .button:focus, main .result .button:active {
         left: 23%;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    main {
+        width: 50%;
+    }
+}
