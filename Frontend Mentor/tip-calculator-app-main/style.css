@@ -184,7 +184,16 @@ main .result .button:focus, main .result .button:active {
     background-color: var(--light-grayish-cyan);
 }
 
-@media screen and (min-width: 1440px) {
+.attribution {
+    color: var(--very-dark-cyan);
+}
+
+.attribution a {
+    color: var(--grayish-cyan);
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
     body {
         display: flex;
         flex-direction: column;
@@ -192,7 +201,7 @@ main .result .button:focus, main .result .button:active {
     }
 
     main {
-        width: 50%;
+        width: 70%;
         flex-direction: row;
         justify-content: space-evenly;
         gap: 2em;
