@@ -13,19 +13,21 @@
 <body>
   <img src="./images/logo.svg" alt="Splitter logo">
   <main>
-          <span class="desc">Bill</span>
-          <input type="number" class="input bill" min="1" step="any" placeholder="142.55"/>
-          <span class="desc">Select Tip %</span>
-          <div class="buttons">
-            <div class="button" tabindex="0">5%</div>
-            <div class="button" tabindex="0">10%</div>
-            <div class="button" tabindex="0">15%</div>
-            <div class="button" tabindex="0">25%</div>
-            <div class="button" tabindex="0">50%</div>
-            <input type="number" class="input custom" min="1" step="any" placeholder="Custom" max="100"/>
-          </div>
-          <span class="desc">Number of People</span>
-          <input type="number" class="input num-people" step="1" placeholder="5" max="12">
+      <div>
+        <span class="desc">Bill</span>
+        <input type="number" class="input bill" min="1" max="10000" step="any" placeholder="0" inputmode="numeric">
+        <span class="desc">Select Tip %</span>
+        <div class="buttons">
+          <div class="button" tabindex="0" value="5">5%</div>
+          <div class="button" tabindex="0" value="10">10%</div>
+          <div class="button" tabindex="0" value="15">15%</div>
+          <div class="button" tabindex="0" value="25">25%</div>
+          <div class="button" tabindex="0" value="50">50%</div>
+          <input type="number" class="input custom" min="1" step="any" placeholder="Custom" max="100">
+        </div>
+        <span class="desc num-people">Number of People</span>
+        <input type="number" class="input num-people" step="1" placeholder="0" max="12">
+      </div>
           <div class="result">
 
             <div class="tip-amount">
@@ -33,7 +35,7 @@
                 <span class="desc">Tip Amount</span><br>
                 <span class="detail">/ person</span>
               </div>
-              <span class="value">$4.29</span>
+              <span class="value">$0.00</span>
             </div>
 
             <div class="total">
@@ -41,10 +43,10 @@
                 <span class="desc">Total</span><br>
                 <span class="detail">/ person</span>
               </div>
-              <span class="value">$32.59</span>
+              <span class="value">$0.00</span>
             </div>
 
-            <div class="button" tabindex="0">RESET</div>
+            <div class="button reset inactive" tabindex="0">RESET</div>
           </div>
   </main>
 <!--   

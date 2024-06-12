@@ -47,6 +47,14 @@ main {
 main .desc {
     color: var(--dark-grayish-cyan);
     font-size: 0.8rem;
+    width: 100%;
+}
+
+main .desc.num-people.error::after {
+    position: relative;
+    content: "Can't be zero";
+    color: tomato;
+    left: 12%;
 }
 
 main input[type="number"].input {
@@ -63,14 +71,15 @@ main input[type="number"].input {
     background-repeat: no-repeat;
     background-position: 5% 50%;
     background-size: 12px;
+    width: 95%;
 }
 
 main input[type="number"].input.custom {
-    padding: 1em;
-    text-align: right;
+    box-sizing: border-box;
+    text-align: center;
     margin: 0;
 }
-
+    
 main input[type="number"].input:focus, main input[type="number"].input:active {
     outline: 1px solid var(--strong-cyan);
     border-color: rgb(139, 139, 139);
@@ -85,6 +94,11 @@ main input[type="number"].input::placeholder {
 
 main input[type="number"].input.num-people {
     background-image: url(./images/icon-person.svg);
+}
+
+main input[type="number"].input.num-people.error {
+    outline: 1px solid tomato;
+    border-radius: 10px;
 }
 
 main .buttons {
@@ -112,6 +126,7 @@ main .buttons .button {
 main .buttons .button:hover, main .buttons .button:focus {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
+    cursor: pointer;
 }
 
 main input[type="number"].input.custom {
@@ -124,6 +139,7 @@ main .result {
     background-color: var(--very-dark-cyan);
     padding: 1.5em 1em;
     border-radius: 10px;
+    user-select: none;
 }
 
 main .result > * {
@@ -155,8 +171,66 @@ main .result .button {
     border-radius: 5px;
     margin-top: 1em;
     background-color: var(--strong-cyan);   
+    user-select: none;
+    cursor: pointer;
+}
+
+main .result .button.reset.inactive {
+    pointer-events: none;
+    opacity: 30%;
 }
 
 main .result .button:focus, main .result .button:active {
     background-color: var(--light-grayish-cyan);
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    main {
+        width: 50%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 2em;
+    }
+
+    main > * {
+        flex-basis: 50%;
+    }
+
+    main .buttons > * {
+        flex-basis: 30%;
+    }
+
+    main div input {
+        width: 100%;
+    }
+
+    main input[type="number"].input.custom {
+        font-size: 24px;
+    }
+
+    main .result {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        justify-items: flex-start;
+    }
+
+    main .result .button {
+        margin-top: auto;
+    }
+
+    main .result div .value {
+        color: var(--strong-cyan);
+        font-size: 50px;
+    }
+
+    main .desc.num-people.error::after {
+        left: 23%;
+    }
 }
