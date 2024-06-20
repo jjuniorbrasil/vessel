@@ -31,5 +31,5 @@ O usuário deve ser capaz de:
 
 ### Links
 
-- Código: [click here.](https://github.com/jjuniorbrasil/vessel/blob/main/ONE/Challenge-1/index.html)
-- Página: [click here.](https://jjuniorbrasil.github.io/vessel/ONE/Challenge-1/index.html)
+- Código: [clique aqui.](https://github.com/jjuniorbrasil/vessel/blob/main/ONE/Challenge-1/index.html)
+- Página: [clique aqui.](https://jjuniorbrasil.github.io/vessel/ONE/Challenge-1/index.html)
