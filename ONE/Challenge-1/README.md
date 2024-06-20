@@ -31,5 +31,5 @@ O usuário deve ser capaz de:
 
 ### Links
 
-- Código: [click here.](https://github.com/jjuniorbrasil/vessel/blob/main/Frontend%20Mentor/tip-calculator-app-main/index.html)
-- Página: [click here.](https://jjuniorbrasil.github.io/vessel/Frontend%20Mentor/tip-calculator-app-main/index.html)
+- Código: [click here.](https://github.com/jjuniorbrasil/vessel/blob/main/ONE/Challenge-1/index.html)
+- Página: [click here.](https://jjuniorbrasil.github.io/vessel/ONE/Challenge-1/index.html)
