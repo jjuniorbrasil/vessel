@@ -65,6 +65,7 @@ button {
     border-radius: 30px;
     font-size: 1.4rem;
     transition: box-shadow 0.1s linear;
+    cursor: pointer;
 }
 
 .decodificador .input .buttons .criptografar {
@@ -186,7 +187,7 @@ button:active {
     }
 
     .decodificador .buttons span {
-        top: -20%;
+        top: -30%;
     }
 
     .decodificador .nomessage img {

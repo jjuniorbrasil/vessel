@@ -20,6 +20,12 @@ function fuiClicado() {
     alert('Fui clicado!');
 };
 
+function removerAcentos(e) {
+    e.preventDefault();
+    let texto = e.target.value;
+    e.target.value = texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
 function toggleHidden(component) {
     component.classList.toggle('hidden');
 };
@@ -99,3 +105,4 @@ criptografarBtn.addEventListener('click', criptografar);
 descriptografarBtn.addEventListener('click', descriptografar);
 copiarBtn.addEventListener('click', copiar);
 input.addEventListener('input', inputLowerCase);
+input.addEventListener('input', removerAcentos);
