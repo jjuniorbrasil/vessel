@@ -20,12 +20,18 @@ header {
     margin: 2.5rem 0;
 }
 
+textarea {
+    box-sizing: border-box;
+    resize: none;
+    width: 100%;
+}
+
 main.decodificador {
     display: flex;
     width: 80%;
     margin: auto;
+    gap: 5em;
     justify-content: space-between;
-    gap: 10rem;
     height: 90%;
 }
 
@@ -114,7 +120,7 @@ button:active {
 }
 
 .decodificador #outmessage {
-    width: 100%;
+    width: 80%;
     height: 70%;
     color: var(--gray);
     font-family: "Inter", sans-serif;
