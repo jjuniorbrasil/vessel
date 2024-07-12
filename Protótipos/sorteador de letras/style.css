@@ -39,10 +39,12 @@ body {
     max-width: 80vw;
     width: 75vw;
     margin: auto;
-    box-shadow: #80c6f25d 1em 1em 0,  
+    box-shadow: #80c6f238 1em 1em 0,  
+                #80c6f22f 1em -1em 2px,
                 #80c6f22f -1em -1em 0,
-                #80c6f22f -0.5em -0.5em 0,
-                #80c6f24b 0.5em 0.5em 0;
+                #80c6f22f -0.5em 0.5em 0,
+                #5498c24b -0.8em 0.5em 2px,
+                #bbdbf01a 0.5em -0.7em 2px;
     transition: width 1s ease-in-out;
 }
 
@@ -68,16 +70,20 @@ body {
 
 .sorteador button {
     width: 300px;
+    border: none;
+    color: white;
+    background: linear-gradient(45deg, #ffb68b, #f5ad6e);
+    transition: all 0.5s ease-in-out;
 }
 
 .sorteador button:hover {
     transition: all 0.5s ease-in-out;
     transition: letter-spacing 0.5s ease-in-out;
     filter: opacity(70%);
-    color: white;
-    border-color: white;
+    border: none;
     background: linear-gradient(45deg, #F26B1D, #F2913D);
-    box-shadow: 2px 2px 5px #5912025e;
+    box-shadow: 5px 5px 0 #59120248;
+    transform: scale(1.01);
 }
 
 .sorteadas {
