@@ -37,8 +37,8 @@ function sortearLetras(qtd) {
     error.innerHTML = '<strong>Operação inválida!</strong>';
     error.className = 'error';
     info.innerHTML = '';
-    let valid = true;
     let sucess = document.createElement('h3');
+    let valid = true;
     
     if (qtd <= 0) {
         sorteadas.appendChild(error);
@@ -51,7 +51,7 @@ function sortearLetras(qtd) {
         let letra = document.createElement('h1');
         let indice = indiceAleatorio(max-min-i);
         
-        if (indice < -1) { 
+        if (indice < 0) { 
                 sorteadas.appendChild(error);
                 sucess.innerHTML = '';
                 valid = false;
@@ -72,7 +72,7 @@ function sortearLetras(qtd) {
 
     navigator.clipboard.writeText(copyToClipboard.toString());
 
-    if (valid) {
+    if (valid === true) {
         sucess.className = 'sucess';
         sucess.innerHTML = 'Letras copiadas para a área de transferência!';
         info.appendChild(sucess);
